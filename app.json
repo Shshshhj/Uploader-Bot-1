@@ -12,9 +12,9 @@
     "remote",
     "uploader"
   ],
-  "website": "https://github.com/Tellybots",
-  "logo": "https://telegra.ph/file/f95edf56a53e929e359c1.jpg",
-  "repository": "https://github.com/PlanetBots",
+  "website": "https://github.com/ananth-28/m1/",
+  "logo": "https://i.pinimg.com/originals/d8/59/18/d8591812d8aae1eb479f78166c612ac0.jpg",
+  "repository": "https://github.com/ananth-28/m1/",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
