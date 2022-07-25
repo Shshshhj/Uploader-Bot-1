@@ -8,8 +8,8 @@ import datetime
 import aiofiles
 import traceback
 import aiofiles.os
-from plugins.config import Config
-from plugins.database.database import db
+from Uploader.config import Config
+from Uploader.database.database import db
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
 
@@ -40,7 +40,7 @@ async def broadcast_handler(m: Message):
     all_users = await db.get_all_users()
     broadcast_msg = m.reply_to_message
     while True:
-        broadcast_id = ''.join([random.choice(string.ascii_letters) for i in range(3)])
+        broadcast_id = ''.join([random.choice(string.ascii_letters) for _ in range(3)])
         if not broadcast_ids.get(broadcast_id):
             break
     out = await m.reply_text(
@@ -103,3 +103,4 @@ async def broadcast_handler(m: Message):
             quote=True
         )
     await aiofiles.os.remove('broadcast.txt')
+

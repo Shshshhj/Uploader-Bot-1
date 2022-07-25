@@ -1,18 +1,20 @@
 aiohttp
-loggers
 beautifulsoup4
 hachoir
 numpy
 Pillow
+pyrogram
 requests
+tgcrypto
 olefile
-filetype
-tldextract
 motor
-aiofiles
+pymongo
 dnspython
 psutil
-pyrogram
-tgcrypto
+loggers
+filetype
+tldextract
+aiofiles
+pyromod
 yt-dlp
 

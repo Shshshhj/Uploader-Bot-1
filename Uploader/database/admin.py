@@ -4,15 +4,18 @@ from pyrogram import filters
 from pyrogram.types import (
     Message
 )
-from plugins.config import Config
-from pyrogram import Client
-from plugins.database.database import db
-from plugins.functions.display_progress import humanbytes
-from plugins.database.bcast import broadcast_handler
+from Uploader.config import Config
+from pyrogram import Client, enums
+from Uploader.database.database import db
+from Uploader.functions.display_progress import humanbytes
+from Uploader.database.bcast import broadcast_handler
 
+f = filters.command("status") & filters.user(Config.OWNER_ID)
 
-@Client.on_message(filters.command("status") & filters.user(Config.OWNER_ID) & ~filters.edited)
-async def status_handler(_, m: Message):
+s = filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply
+
+@Client.on_message(f)
+async def edited(_, m: Message):
     total, used, free = shutil.disk_usage(".")
     total = humanbytes(total)
     used = humanbytes(used)
@@ -28,13 +31,12 @@ async def status_handler(_, m: Message):
              f"**CPU Usage:** {cpu_usage}% \n"
              f"**RAM Usage:** {ram_usage}%\n\n"
              f"**Total Users in DB:** `{total_users}`",
-        parse_mode="Markdown",
+        parse_mode=enums.ParseMode.MARKDOWN,
         quote=True
     )
+    print("edited")
 
-
-@Client.on_message(filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply & ~filters.edited)
-async def broadcast_in(_, m: Message):
+@Client.on_message(s)
+async def edited(_, m: Message):
     await broadcast_handler(m)
-
-
+    print("edited")

@@ -3,70 +3,144 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 class Translation(object):
 
     START_TEXT = """
-Hey {}
+Hi {} 🥰
 
-I am Telegram Most Powerful Url Uploader Bot
+💡 `I am Telegram most Powerful Url Uploader Bot`
 
-I can Upload Any Link in File or Video except Drm Protected Links
+<b>⚙️ Press /settings to change my settings</b>
 
-Use Help Button to Know How to Use me
+Use help button to know how to use me
 
-Made With 💕 By @Tellybots
+🦊 <b>Maintained By</b> : [Tellybots](https://telegram.me/TellyBots)
 """
     HELP_TEXT = """
-Link to Media or File
-➠ Send a link for upload to telegram file or media.
+You need Help ?? 😅
+   
+✵ First go to the /settings and change the bot behavior as your choice.
 
-Set Thumbnail
-➠ Send a photo to make it as permanent thumbnail.
+✵ Send me the custom thumbnail to save it permanently. (𝚘𝚙𝚝𝚒𝚘𝚗𝚊𝚕)
 
-Deleting Thumbnail
-➠ Send /delthumbnail to delete thumbnail.
+✵ Now send me the ytdl or direct link.
 
-Show Thumbnail
-➠ Send /showthumb to view custom thumbnail.
+✵ Select the desired option.
 
-Made With 💕 By @Tellybots
+✵ Then be relaxed your file will be uploaded soon..
+
+✵ Use `/caption` to Set caption as Reply to Media
+
+Maintained By : [Tellybots](https://telegram.me/TellyBots)
+ 
 """
     ABOUT_TEXT = """
- **🤖 Bot :** Url Uploader\n
- **👲 Developer :** [Tellybots](https://telegram.me/tellybots)\n
- **👥 Channel :** [Tellybots](https://telegram.me/tellybots)\n
- **❄️ Credits :** Everyone in this journey\n
- **🍴 Source :** [Click here](https://t.me/tellybots_digital)\n
- **📝 Language :** [Python3](https://python.org)\n
- **📚 Library :** [Pyrogram v1.2.0](https://pyrogram.org)\n
- **🌟 Server :** [Heroku](https://heroku.com)\n
+**♻️ My Name** : [Url Uploader Bot](http://t.me/TellyUploaderRobot)
+
+**🌀 Channel** : [Tellybots](https://t.me/TellyBots)
+
+**⚗️ Version** : [4.0 Beta](https://t.me/TellyUploaderRobot)
+
+**🌠 Source** : [Click Here](https://t.me/tellybots_digital)
+
+**🌺 Heroku** : [Heroku](https://heroku.com/)
+
+**📑 Language :** [Python 3.10.5](https://www.python.org/)
+
+**🇵🇲 Framework :** [Pyrogram 2.0.30](https://docs.pyrogram.org/)
+
+**👲 Developer :** [Tellybots](https://t.me/tellybots)
+
+**🦊 Maintained By :** [NaysaBots](https://t.me/NaysaBots)
+
 """
+
+
+    PROGRESS = """
+🔰 Speed : {3}/s\n\n
+🌀 Done : {1}\n\n
+🎥 Tᴏᴛᴀʟ sɪᴢᴇ  : {2}\n\n
+⏳ Tɪᴍᴇ ʟᴇғᴛ : {4}\n\n
+"""
+    ID_TEXT = """
+🆔 Your Telegram ID 𝐢𝐬 :- <code>{}</code>
+"""
+
+    INFO_TEXT = """
+
+ 🤹 First Name : <b>{}</b>
+
+ 🚴‍♂️ Second Name : <b>{}</b>
+
+ 🧑🏻‍🎓 Username : <b>@{}</b>
+
+ 🆔 Telegram Id : <code>{}</code>
+
+ 📇 Profile Link : <b>{}</b>
+
+ 📡 Dc : <b>{}</b>
+
+ 📑 Language : <b>{}</b>
+
+ 👲 Status : <b>{}</b>
+"""
+
+    PLANS = """🔰 My Plans 🔰
+
+🛡️PLANS 1(PER 50 LINKS)🛡️
+
+🌸 1 Day      - ₹20
+🌺 1 Week   - ₹80
+🌷 1 Month - ₹140
+
+🛡️ PLANS 2(PER 100 LINKS)🛡️
+
+🌸 1 Day      - ₹40
+🌺 1 Week   - ₹100
+🌷 1 Month - ₹160
+
+🛡️ PLANS 3(PER 200 LINKS)🛡️
+
+🌸 1Day      - ₹60
+🌺 1Week   - ₹120
+🌷 1Month - ₹180
+
+"""
+
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🤖 Channel', url='https://telegram.me/tellybots'),
-        InlineKeyboardButton('💬 Support', url='https://telegram.me/tellybots_support')
+        InlineKeyboardButton('⚙️ Settings', callback_data='OpenSettings')
         ],[
-        InlineKeyboardButton('❔ Help', callback_data='help'),
-        InlineKeyboardButton('⛔ Close', callback_data='close')
+        InlineKeyboardButton('❓ Help', callback_data='help'),
+        InlineKeyboardButton('🦊 About', callback_data='about')
+        ],[
+        InlineKeyboardButton('📛 Close', callback_data='close')
         ]]
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🏡 Home', callback_data='home'),
-        InlineKeyboardButton('👲 About', callback_data='about'),
-        InlineKeyboardButton('⛔ Close', callback_data='close')
+        InlineKeyboardButton('🏠 Home', callback_data='home'),
+        InlineKeyboardButton('🦊 About', callback_data='about')
+        ],[
+        InlineKeyboardButton('📛 Close', callback_data='close')
         ]]
     )
     ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🏡 Home', callback_data='home'),
-        InlineKeyboardButton('❔ Help', callback_data='help'),
-        InlineKeyboardButton('⛔ Close', callback_data='close')
+        InlineKeyboardButton('🏠 Home', callback_data='home'),
+        InlineKeyboardButton('❓ Help', callback_data='help')
+        ],[
+        InlineKeyboardButton('📛 Close', callback_data='close')
         ]]
     )
-
+    BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('📛 Close', callback_data='close')
+        ]]
+    )
+    TEXT = "sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴛᴏ sᴇᴛ ɪᴛ"
     IFLONG_FILE_NAME = " Only 64 characters can be named . "
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "<b>No preminum plans available in this bot </b>  /help for Details"
-    FORMAT_SELECTION = "Now Select The Desired Format or File 🗄️ Size to Upload"
+    FORMAT_SELECTION = "Now Select the desired formats"
     SET_CUSTOM_USERNAME_PASSWORD = """"""
     NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
     DOWNLOAD_FILE = "📥 Downloading  File "
@@ -74,21 +148,21 @@ Made With 💕 By @Tellybots
     ANNO_UPLOAD = " UploadinG📤 \n\n To  anonfiles.com "
     BAY_UPLOAD = " UploadinG📤 \n\n To  bayfiles.com "
     GO_FILE_UPLOAD = " 📤UploadinG📤 \n\n To  gofile.io "
-    DOWNLOAD_START = "📄 Please Wait Until It's Completed ⏳\n\n📥 Downloading started..."
-    UPLOAD_START = "📤 Uploading Please Wait..."
+    DOWNLOAD_START = "Trying to Download ⌛\n\n💮🌸 <i>{} 💮🌸</i>"
+    UPLOAD_START = "💮🌸 <i>{} 💮🌸</i>\n\n📤 Uploading Please Wait "
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 2GB due to Telegram API limitations."
     AFTER_SUCCESSFUL_UPLOAD_MSG = " JOIN : https://t.me/TGBotsCollection\nFor the List of Telegram Bots"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds.\n\nThanks For Using Me\n\nUploaded in {} seconds."
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Dᴏᴡɴʟᴏᴀᴅᴇᴅ ɪɴ {} sᴇᴄᴏɴᴅs.\n\nTʜᴀɴᴋs Fᴏʀ Usɪɴɢ Mᴇ\n\nUᴘʟᴏᴀᴅᴇᴅ ɪɴ {} sᴇᴄᴏɴᴅs"
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription.\nIf you think this is a bug, please contact <a href='https://telegram.dog/ThankTelegram'>@SpEcHlDe</a>"
-    SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
-    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
+    SAVED_CUSTOM_THUMB_NAIL = "Cᴜsᴛᴏᴍ ᴠɪᴅᴇᴏ / ғɪʟᴇ ᴛʜᴜᴍʙɴᴀɪʟ sᴀᴠᴇᴅ. Tʜɪs ɪᴍᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴜsᴇᴅ ɪɴ ᴛʜᴇ ᴠɪᴅᴇᴏ / ғɪʟᴇ."
+    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Cᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴄʟᴇᴀʀᴇᴅ sᴜᴄᴄᴇsғᴜʟʟʏ"
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
     SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
     CUSTOM_CAPTION_UL_FILE = " "
-    NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
-    NO_VOID_FORMAT_FOUND = "Please Send a Valid Url"
+    NO_CUSTOM_THUMB_NAIL_FOUND = "Nᴏ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ғᴏᴜɴᴅ"
+    NO_VOID_FORMAT_FOUND = "ERROR... <code>{}</code>"
     FILE_NOT_FOUND = "Error, File not Found!!"
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     SOMETHING_WRONG = "<code>Something Wrong. Try again.</code>"
@@ -119,9 +193,13 @@ Made With 💕 By @Tellybots
 You can use /rename command after receiving file to rename it with custom thumbnail support."""
     CANCEL_STR = "Process Cancelled"
     ZIP_UPLOADED_STR = "Uploaded {} files in {} seconds"
-    FREE_USER_LIMIT_Q_SZE = """Cannot Process.
-Free users only 1 request per 30 minutes.
-/upgrade or Try 1800 seconds later."""
+    FREE_USER_LIMIT_Q_SZE = """Cannot Process Free users only 1 request per 4 hrs\n
+Upgrade your /plans to Remove Time Gaps and For link Processing"""
     SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you try this:==> https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
     FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
     BANNED_USER_TEXT = "<code>You are Banned!</code>"
+    CHECK_LINK = "Analysing <b>⌛</b>"
+
+    ADD_CAPTION_HELP = """Select an uploaded file/video or forward me <b>Any Telegram File</b> and just write the text you want to be on the file <b>as a reply to the file</b> and the text you wrote will be attached as the caption! 🤩
+    
+Ex: <a href='https://telegra.ph/file/198bcda5944f787373122.jpg'>See This!</a> 👇"""
